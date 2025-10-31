@@ -4,11 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="create project" />
+    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="test(several files): create tests">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Capturas/Captura_.docker_run.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Capturas/Captura_llamada_curl.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/application/service/GetSimilarProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/application/service/GetSimilarProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/ProductDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/ProductDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/config/AppConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/config/AppConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/application/service/GetSimilarProductsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/application/service/GetSimilarProductsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/domain/model/ProductDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/domain/model/ProductDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/config/AppConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/config/AppConfigTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Exception" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -28,6 +58,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/samuel-pnj/prueba-inditex.git&quot;,
     &quot;accountId&quot;: &quot;ed563abe-b6ba-4572-969f-0d4d0cf2d37c&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;samuel-pnj&quot;,
+    &quot;repository&quot;: &quot;prueba-inditex&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -47,26 +87,109 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.Application.executor": "Run",
     "Application.Unnamed.executor": "Run",
+    "JUnit.All in similar-products (1).executor": "Coverage",
+    "JUnit.All in similar-products (2).executor": "Run",
+    "JUnit.All in similar-products (3).executor": "Coverage",
+    "JUnit.All in similar-products.executor": "Run",
+    "JUnit.AppConfigTest.executor": "Run",
+    "JUnit.ApplicationContextTest.executor": "Run",
+    "JUnit.GetSimilarProductsServiceTest.shouldPropagateErrorWhenSimilarIdsFails.executor": "Run",
+    "JUnit.GetSimilarProductsServiceTest.shouldReturnEmptyListWhenSimilarIdsFails.executor": "Run",
+    "JUnit.GetSimilarProductsServiceTest.shouldReturnListOfProductsWhenIdsExist.executor": "Run",
+    "JUnit.ProductControllerTest (1).executor": "Run",
+    "JUnit.ProductControllerTest.executor": "Run",
+    "JUnit.ProductDetailClientAdapterTest.executor": "Run",
+    "JUnit.RestExceptionHandlerTest.executor": "Run",
+    "JUnit.SimilarIdsClientAdapterTest.executor": "Run",
+    "Maven.similar-products [clean,install].executor": "Run",
+    "Maven.similar-products [clean].executor": "Run",
     "Maven.similar-products [compile].executor": "Run",
+    "Maven.similar-products [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/SimilarProductService-creation",
     "last_opened_file_path": "C:/Users/samue/Desktop/prueba-inditec/prueba-inditex",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\Desktop\prueba-inditec\prueba-inditex" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\Desktop\prueba-inditec\prueba-inditex\src\test\resources\Capturas" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.similarProducts.application.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.Application" />
-      <module name="backendDevTest" />
+      <module name="similar-products" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in similar-products (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in similar-products (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in similar-products (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in similar-products" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationContextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.similarProducts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.similarProducts" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.ApplicationContextTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in similar-products (2)" />
+        <item itemvalue="JUnit.All in similar-products (3)" />
+        <item itemvalue="JUnit.All in similar-products" />
+        <item itemvalue="JUnit.ApplicationContextTest" />
+        <item itemvalue="JUnit.All in similar-products (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -100,7 +223,103 @@
       <option name="project" value="LOCAL" />
       <updated>1761846434208</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit( create and compile project)">
+      <option name="closed" value="true" />
+      <created>1761847288579</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761847288579</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(config): add Webclient configuration and base properties">
+      <option name="closed" value="true" />
+      <created>1761895609579</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761895609579</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(config): add Webclient configuration and base properties">
+      <option name="closed" value="true" />
+      <created>1761895653210</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761895653210</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(domain): define Product">
+      <option name="closed" value="true" />
+      <created>1761895751444</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761895751444</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(domain): add domain exceptions for business and not found errors">
+      <option name="closed" value="true" />
+      <created>1761903400706</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761903400706</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(ports): define inbound and outbound ports for hexagonal architecture">
+      <option name="closed" value="true" />
+      <created>1761905132986</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761905132986</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(adapter): implement outbound HTTP clients for product and similar IDs">
+      <option name="closed" value="true" />
+      <created>1761905149920</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761905149921</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(usecase): implement GetSimilarProductsService using reactive approach">
+      <option name="closed" value="true" />
+      <created>1761905184777</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761905184777</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(controller): expose REST endpoint GET /product/{productId}/similar">
+      <option name="closed" value="true" />
+      <created>1761906465359</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761906465359</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor(several files): refactor code to improve">
+      <option name="closed" value="true" />
+      <created>1761909930957</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761909930957</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor(several files): lesser modifications">
+      <option name="closed" value="true" />
+      <created>1761912638917</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761912638917</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test(several files): create tests">
+      <option name="closed" value="true" />
+      <created>1761912655244</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761912655244</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +348,41 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit (add microservice apis and compile project)" />
     <MESSAGE value="create project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create project" />
+    <MESSAGE value="first commit( create and compile project)" />
+    <MESSAGE value="feat(config): add Webclient configuration and base properties" />
+    <MESSAGE value="feat(domain): define Product" />
+    <MESSAGE value="feat(domain): add domain exceptions for business and not found errors" />
+    <MESSAGE value="feat(ports): define inbound and outbound ports for hexagonal architecture" />
+    <MESSAGE value="feat(adapter): implement outbound HTTP clients for product and similar IDs" />
+    <MESSAGE value="feat(usecase): implement GetSimilarProductsService using reactive approach" />
+    <MESSAGE value="feat(controller): expose REST endpoint GET /product/{productId}/similar" />
+    <MESSAGE value="refactor(several files): refactor code to improve" />
+    <MESSAGE value="refactor(several files): lesser modifications" />
+    <MESSAGE value="test(several files): create tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="test(several files): create tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/inbound/rest/ProductController.java</url>
+          <line>25</line>
+          <properties class="com.example.similarProducts.adapters.inbound.rest.ProductController" method="getSimilar">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.concurrent.TimeoutException" package="java.util.concurrent" />
+          <option name="timeStamp" value="16" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products.ic" NAME="All in similar-products Coverage Results" MODIFIED="1761913768114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__2_.ic" NAME="All in similar-products (2) Coverage Results" MODIFIED="1761912336569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__1_.ic" NAME="All in similar-products (1) Coverage Results" MODIFIED="1761912451407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
