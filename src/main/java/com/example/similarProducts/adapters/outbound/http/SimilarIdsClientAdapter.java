@@ -4,11 +4,13 @@ import com.example.similarProducts.domain.model.exception.ExternalServiceExcepti
 import com.example.similarProducts.domain.model.exception.NotFoundException;
 import com.example.similarProducts.ports.outbound.GetSimilarIdsPort;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
 
+@Component
 public class SimilarIdsClientAdapter implements GetSimilarIdsPort {
 
     private final WebClient webClient;
