@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ProductDetail.JSON_PROPERTY_PRICE,
   ProductDetail.JSON_PROPERTY_AVAILABILITY
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-30T17:52:08.350732300+01:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-30T19:25:42.041856900+01:00[Europe/Madrid]")
 public class ProductDetail {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

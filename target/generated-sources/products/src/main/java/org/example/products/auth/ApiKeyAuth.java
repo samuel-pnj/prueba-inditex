@@ -3,7 +3,7 @@ package org.example.products.auth;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-30T17:52:08.911731+01:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-30T19:25:42.616857100+01:00[Europe/Madrid]")
 public class ApiKeyAuth implements Authentication {
     private final String location;
     private final String paramName;

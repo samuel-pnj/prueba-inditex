@@ -4,11 +4,108 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="create project" />
+    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="first commit( create and compile project)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/inbound/rest/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/ProductRemoteWebClientAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/application/service/GetSimilarProductsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/ProductDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/ports/inbound/GetSimilarProductsPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/ports/outbound/GetProductDetailPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/ports/outbound/GetSimilarIdsPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/existingApis.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarProducts.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.github/workflows/maven.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/FILES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/existingApis.yaml-generate-api.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/api/openapi.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/docs/DefaultApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/docs/ProductDetail.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/git_push.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/JavaTimeFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/RFC3339DateFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ServerVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/api/DefaultApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/ApiKeyAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/HttpBasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/HttpBearerAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/model/ProductDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/test/java/org/example/client/api/DefaultApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/test/java/org/example/client/model/ProductDetailTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.github/workflows/maven.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/FILES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/similarProducts.yaml-generate-products.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/api/openapi.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/docs/DefaultApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/docs/ProductDetail.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/git_push.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/JavaTimeFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/RFC3339DateFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ServerVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/api/DefaultApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/ApiKeyAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/HttpBasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/HttpBearerAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/model/ProductDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/test/java/org/example/products/api/DefaultApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/test/java/org/example/products/model/ProductDetailTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -28,6 +125,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/samuel-pnj/prueba-inditex.git&quot;,
     &quot;accountId&quot;: &quot;ed563abe-b6ba-4572-969f-0d4d0cf2d37c&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;samuel-pnj&quot;,
+    &quot;repository&quot;: &quot;prueba-inditex&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -42,27 +149,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Application.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Maven.similar-products [compile].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/samue/Desktop/prueba-inditec/prueba-inditex",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.similar-products [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.similar-products [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.similar-products [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.similar-products [install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/SimilarProductService-creation&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/samue/Desktop/prueba-inditec/prueba-inditex&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\Desktop\prueba-inditec\prueba-inditex" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.Application" />
-      <module name="backendDevTest" />
+      <module name="similar-products" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761846434208</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit( create and compile project)">
+      <option name="closed" value="true" />
+      <created>1761847288579</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761847288579</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit (add microservice apis and compile project)" />
     <MESSAGE value="create project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create project" />
+    <MESSAGE value="first commit( create and compile project)" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit( create and compile project)" />
   </component>
 </project>
