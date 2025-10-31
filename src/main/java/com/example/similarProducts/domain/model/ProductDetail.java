@@ -1,5 +1,6 @@
 package com.example.similarProducts.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
 public class ProductDetail {
@@ -8,7 +9,9 @@ public class ProductDetail {
     private final String id;
     private final String name;
     private final Double price;
-    private final boolean availability;
+
+    @JsonProperty("available")
+    private boolean availability;
 
     public ProductDetail(String id, String name, Double price, boolean availability) {
         this.id = id;
@@ -20,5 +23,7 @@ public class ProductDetail {
     public String getId() {return id;}
     public String getName() {return name;}
     public Double getPrice() {return price;}
-    public boolean getAvailability() {return availability;}
+    public boolean isAvailability() {
+        return availability;
+    }
 }
