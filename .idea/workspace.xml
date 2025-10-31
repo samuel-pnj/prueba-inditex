@@ -4,92 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="feat(controller): expose REST endpoint GET /product/{productId}/similar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/exception/ExternalServiceException.java" afterDir="false" />
+    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="refactor(several files): refactor code to improve">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/inbound/rest/ProductControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapterTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/application/service/GetSimilarProductsServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/domain/model/exception/RestExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/inbound/rest/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/inbound/rest/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/ProductRemoteWebClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/application/service/GetSimilarProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/application/service/GetSimilarProductsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/exception/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/exception/RestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.github/workflows/maven.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator-ignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/FILES" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/existingApis.yaml-generate-api.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/api/openapi.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/build.sbt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/docs/DefaultApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/docs/ProductDetail.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/git_push.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ApiClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/JavaTimeFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/RFC3339DateFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ServerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ServerVariable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/StringUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/api/DefaultApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/ApiKeyAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/Authentication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/HttpBasicAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/HttpBearerAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/model/ProductDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/test/java/org/example/client/api/DefaultApiTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/test/java/org/example/client/model/ProductDetailTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.github/workflows/maven.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator-ignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/FILES" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/similarProducts.yaml-generate-products.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/api/openapi.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/build.sbt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/docs/DefaultApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/docs/ProductDetail.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/git_push.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ApiClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/JavaTimeFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/RFC3339DateFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ServerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ServerVariable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/StringUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/api/DefaultApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/ApiKeyAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/Authentication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/HttpBasicAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/HttpBearerAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/model/ProductDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/test/java/org/example/products/api/DefaultApiTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/test/java/org/example/products/model/ProductDetailTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/ProductDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/domain/model/ProductDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/domain/model/ProductDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/domain/model/ProductDetail.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,10 +75,17 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.Application.executor": "Run",
     "Application.Unnamed.executor": "Run",
+    "JUnit.All in similar-products (1).executor": "Coverage",
+    "JUnit.All in similar-products (2).executor": "Coverage",
     "JUnit.All in similar-products.executor": "Coverage",
     "JUnit.GetSimilarProductsServiceTest.shouldPropagateErrorWhenSimilarIdsFails.executor": "Run",
     "JUnit.GetSimilarProductsServiceTest.shouldReturnEmptyListWhenSimilarIdsFails.executor": "Run",
     "JUnit.GetSimilarProductsServiceTest.shouldReturnListOfProductsWhenIdsExist.executor": "Run",
+    "JUnit.ProductControllerTest (1).executor": "Run",
+    "JUnit.ProductControllerTest.executor": "Run",
+    "JUnit.ProductDetailClientAdapterTest.executor": "Run",
+    "JUnit.RestExceptionHandlerTest.executor": "Run",
+    "JUnit.SimilarIdsClientAdapterTest.executor": "Run",
     "Maven.similar-products [clean,install].executor": "Run",
     "Maven.similar-products [clean].executor": "Run",
     "Maven.similar-products [compile].executor": "Run",
@@ -176,7 +106,7 @@
       <recent name="com.example.similarProducts.application.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in similar-products">
+  <component name="RunManager" selected="JUnit.ApplicationContextTest">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -186,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in similar-products" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in similar-products (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="similar-products" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -194,60 +124,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetSimilarProductsServiceTest.shouldPropagateErrorWhenSimilarIdsFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in similar-products (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="similar-products" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.similarProducts.application.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.similarProducts.application.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.application.service.GetSimilarProductsServiceTest" />
-      <option name="METHOD_NAME" value="shouldPropagateErrorWhenSimilarIdsFails" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetSimilarProductsServiceTest.shouldReturnEmptyListWhenSimilarIdsFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppConfigTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="similar-products" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.similarProducts.application.service.*" />
+          <option name="PATTERN" value="com.example.similarProducts.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.similarProducts.application.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.application.service.GetSimilarProductsServiceTest" />
-      <option name="METHOD_NAME" value="shouldReturnEmptyListWhenSimilarIdsFails" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.similarProducts.config" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.config.AppConfigTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetSimilarProductsServiceTest.shouldReturnListOfProductsWhenIdsExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationContextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="similar-products" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.similarProducts.application.service.*" />
+          <option name="PATTERN" value="com.example.similarProducts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.similarProducts.application.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.application.service.GetSimilarProductsServiceTest" />
-      <option name="METHOD_NAME" value="shouldReturnListOfProductsWhenIdsExist" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.similarProducts" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.ApplicationContextTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestExceptionHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.similarProducts.domain.model.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.similarProducts.domain.model.exception" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.domain.model.exception.RestExceptionHandlerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in similar-products" />
-        <item itemvalue="JUnit.GetSimilarProductsServiceTest.shouldPropagateErrorWhenSimilarIdsFails" />
-        <item itemvalue="JUnit.GetSimilarProductsServiceTest.shouldReturnListOfProductsWhenIdsExist" />
-        <item itemvalue="JUnit.GetSimilarProductsServiceTest.shouldReturnEmptyListWhenSimilarIdsFails" />
+        <item itemvalue="JUnit.ApplicationContextTest" />
+        <item itemvalue="JUnit.All in similar-products (1)" />
+        <item itemvalue="JUnit.AppConfigTest" />
+        <item itemvalue="JUnit.All in similar-products (2)" />
+        <item itemvalue="JUnit.RestExceptionHandlerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761906465359</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor(several files): refactor code to improve">
+      <option name="closed" value="true" />
+      <created>1761909930957</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761909930957</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,6 +336,27 @@
     <MESSAGE value="feat(adapter): implement outbound HTTP clients for product and similar IDs" />
     <MESSAGE value="feat(usecase): implement GetSimilarProductsService using reactive approach" />
     <MESSAGE value="feat(controller): expose REST endpoint GET /product/{productId}/similar" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(controller): expose REST endpoint GET /product/{productId}/similar" />
+    <MESSAGE value="refactor(several files): refactor code to improve" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(several files): refactor code to improve" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/similarProducts/adapters/inbound/rest/ProductController.java</url>
+          <line>25</line>
+          <properties class="com.example.similarProducts.adapters.inbound.rest.ProductController" method="getSimilar">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products.ic" NAME="All in similar-products Coverage Results" MODIFIED="1761912213223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__2_.ic" NAME="All in similar-products (2) Coverage Results" MODIFIED="1761912336569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__1_.ic" NAME="All in similar-products (1) Coverage Results" MODIFIED="1761911453737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
