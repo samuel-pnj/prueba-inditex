@@ -23,14 +23,11 @@ public class ProductController {
     }
 
     @GetMapping("/{productId}/similar")
-    public Mono<ResponseEntity<?>> getSimilar(@PathVariable String productId) {
+    public Mono<ResponseEntity<List<ProductDetail>>> getSimilar(@PathVariable String productId) {
         return getSimilarProductsPort.getSimilarProducts(productId)
-                .map(list -> list.isEmpty()
-                        ? ResponseEntity.notFound().build()
-                        : ResponseEntity.ok(list))
-                .onErrorResume(ex ->
-                        Mono.<ResponseEntity<List<ProductDetail>>>just(ResponseEntity.status(500).build()));
+                .map(ResponseEntity::ok); // 200 OK con la lista
     }
+
 
 
 }

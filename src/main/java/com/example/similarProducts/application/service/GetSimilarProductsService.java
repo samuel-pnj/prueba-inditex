@@ -22,12 +22,12 @@ public class GetSimilarProductsService implements GetSimilarProductsPort {
     }
 
     @Override
-    public Mono<List<ProductDetail>> getSimilarProducts(String productId){
+    public Mono<List<ProductDetail>> getSimilarProducts(String productId) {
         return getSimilarIdsPort.getSimilarIds(productId)
                 .flatMapMany(Flux::fromIterable)
                 .flatMap(id -> getProductDetailPort.getProductDetail(id)
-                        .timeout(Duration.ofSeconds(2))
-                        .onErrorResume(ex -> Mono.empty()))
+                                .timeout(Duration.ofSeconds(2))
+                        , /* concurrency */ Math.max(Runtime.getRuntime().availableProcessors(), 4))
                 .collectList();
     }
 }
