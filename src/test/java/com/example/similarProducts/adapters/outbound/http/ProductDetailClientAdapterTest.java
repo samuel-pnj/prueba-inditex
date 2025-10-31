@@ -42,13 +42,13 @@ class ProductDetailClientAdapterTest {
     @Test
     void getProductDetail_returnsProductDetail_when200() {
         String json = """
-            {
-              "id": "1",
-              "name": "Product 1",
-              "price": 10.5,
-              "available": true
-            }
-            """;
+        {
+          "id": "1",
+          "name": "Product 1",
+          "price": 10.5,
+          "availability": true
+        }
+        """;
 
         ClientResponse okResponse = ClientResponse.create(HttpStatus.OK)
                 .header("Content-Type", MediaType.APPLICATION_JSON_VALUE)
@@ -61,8 +61,12 @@ class ProductDetailClientAdapterTest {
         StepVerifier.create(clientAdapter.getProductDetail("1"))
                 .assertNext(p -> {
                     System.out.println("product = " + p);
-                    System.out.println("available = " + p.isAvailability());
-                    org.junit.jupiter.api.Assertions.assertTrue(p.isAvailability());
+                    System.out.println("availability = " + p.isAvailability());
+                    // comprobaciones más completas y con mensaje claro
+                    org.junit.jupiter.api.Assertions.assertEquals("1", p.getId(), "id mismatch");
+                    org.junit.jupiter.api.Assertions.assertEquals("Product 1", p.getName(), "name mismatch");
+                    org.junit.jupiter.api.Assertions.assertEquals(10.5, p.getPrice(), 1e-6, "price mismatch");
+                    org.junit.jupiter.api.Assertions.assertTrue(p.isAvailability(), "expected availability true");
                 })
                 .verifyComplete();
     }
