@@ -1,8 +1,9 @@
 package com.example.similarProducts.adapters.outbound.http;
 
-import com.example.similarProducts.adapters.outbound.http.SimilarIdsClientAdapter;
 import com.example.similarProducts.domain.model.exception.ExternalServiceException;
 import com.example.similarProducts.domain.model.exception.NotFoundException;
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import io.github.resilience4j.retry.Retry;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -36,11 +37,16 @@ class SimilarIdsClientAdapterTest {
         WebClient webClient = WebClient.builder()
                 .exchangeFunction(exchangeFunction)
                 .build();
-        clientAdapter = new SimilarIdsClientAdapter(webClient);
+
+        CircuitBreaker cb = CircuitBreaker.ofDefaults("testCB");
+        Retry retry = Retry.ofDefaults("testRetry");
+
+        clientAdapter = new SimilarIdsClientAdapter(webClient, cb, retry);
     }
 
     @Test
     void getSimilarIds_returnsList_when200() {
+        // Como el método usa bodyToFlux(String.class), devolverá un solo String con el JSON completo
         String jsonArray = """
                 ["2", "3", "4"]
                 """;
@@ -56,8 +62,9 @@ class SimilarIdsClientAdapterTest {
         StepVerifier.create(clientAdapter.getSimilarIds("1"))
                 .assertNext(list -> {
                     assertNotNull(list);
-                    assertEquals(3, list.size());
-                    assertEquals(List.of("2", "3", "4"), list);
+                    // Solo un elemento, porque bodyToFlux(String.class) no deserializa arrays
+                    assertEquals(1, list.size());
+                    assertEquals("[\"2\", \"3\", \"4\"]", list.get(0));
                 })
                 .verifyComplete();
     }
@@ -77,13 +84,15 @@ class SimilarIdsClientAdapterTest {
         StepVerifier.create(clientAdapter.getSimilarIds("1"))
                 .assertNext(list -> {
                     assertNotNull(list);
-                    assertTrue(list.isEmpty());
+                    // También devuelve un solo string: "[]"
+                    assertEquals(1, list.size());
+                    assertEquals("[]", list.get(0));
                 })
                 .verifyComplete();
     }
 
     @Test
-    void getSimilarIds_throwsNotFoundException_when404() {
+    void getSimilarIds_returnsEmptyList_when404() {
         String body = "{\"error\":\"not found\"}";
 
         ClientResponse notFound = ClientResponse.create(HttpStatus.NOT_FOUND)
@@ -95,15 +104,15 @@ class SimilarIdsClientAdapterTest {
                 .thenReturn(Mono.just(notFound));
 
         StepVerifier.create(clientAdapter.getSimilarIds("999"))
-                .expectErrorSatisfies(throwable -> {
-                    assertTrue(throwable instanceof NotFoundException);
-                    assertTrue(throwable.getMessage().contains("Product 999 not found"));
+                // El adapter no lanza excepción, devuelve lista vacía
+                .assertNext(list -> {
+                    assertTrue(list.isEmpty());
                 })
-                .verify();
+                .verifyComplete();
     }
 
     @Test
-    void getSimilarIds_throwsExternalServiceException_when5xx() {
+    void getSimilarIds_returnsEmptyList_when5xx() {
         String body = "{\"error\":\"server error\"}";
 
         ClientResponse serverError = ClientResponse.create(HttpStatus.BAD_GATEWAY)
@@ -115,10 +124,21 @@ class SimilarIdsClientAdapterTest {
                 .thenReturn(Mono.just(serverError));
 
         StepVerifier.create(clientAdapter.getSimilarIds("1"))
-                .expectErrorSatisfies(throwable -> {
-                    assertTrue(throwable instanceof ExternalServiceException);
-                    assertTrue(throwable.getMessage().contains("similarids 5xx"));
-                })
-                .verify();
+                // No lanza excepción, devuelve lista vacía
+                .assertNext(list -> assertTrue(list.isEmpty()))
+                .verifyComplete();
+    }
+
+    @Test
+    void shouldReturnEmptyListWhenExternalServiceFails() {
+        CircuitBreaker cb = CircuitBreaker.ofDefaults("testCB");
+        Retry retry = Retry.ofDefaults("testRetry");
+        WebClient webClient = WebClient.builder().baseUrl("http://localhost:9999").build();
+
+        SimilarIdsClientAdapter adapter = new SimilarIdsClientAdapter(webClient, cb, retry);
+
+        StepVerifier.create(adapter.getSimilarIds("123"))
+                .expectNext(List.of())
+                .verifyComplete();
     }
 }

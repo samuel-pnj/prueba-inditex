@@ -1,9 +1,8 @@
 package com.example.similarProducts.adapters.outbound.http;
 
-import com.example.similarProducts.adapters.outbound.http.ProductDetailClientAdapter;
 import com.example.similarProducts.domain.model.ProductDetail;
-import com.example.similarProducts.domain.model.exception.ExternalServiceException;
-import com.example.similarProducts.domain.model.exception.NotFoundException;
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import io.github.resilience4j.retry.Retry;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -11,7 +10,6 @@ import org.springframework.core.io.buffer.DataBufferFactory;
 import org.springframework.core.io.buffer.DefaultDataBufferFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.ExchangeFunction;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -28,7 +26,7 @@ class ProductDetailClientAdapterTest {
 
     private ExchangeFunction exchangeFunction;
     private ProductDetailClientAdapter clientAdapter;
-    private DataBufferFactory dataBufferFactory = new DefaultDataBufferFactory();
+    private final DataBufferFactory dataBufferFactory = new DefaultDataBufferFactory();
 
     @BeforeEach
     void setUp() {
@@ -36,7 +34,11 @@ class ProductDetailClientAdapterTest {
         WebClient webClient = WebClient.builder()
                 .exchangeFunction(exchangeFunction)
                 .build();
-        clientAdapter = new ProductDetailClientAdapter(webClient);
+
+        CircuitBreaker cb = CircuitBreaker.ofDefaults("testCB");
+        Retry retry = Retry.ofDefaults("testRetry");
+
+        clientAdapter = new ProductDetailClientAdapter(webClient, cb, retry);
     }
 
     @Test
@@ -55,24 +57,20 @@ class ProductDetailClientAdapterTest {
                 .body(Flux.just(dataBufferFactory.wrap(json.getBytes(StandardCharsets.UTF_8))))
                 .build();
 
-        when(exchangeFunction.exchange(any()))
-                .thenReturn(Mono.just(okResponse));
+        when(exchangeFunction.exchange(any())).thenReturn(Mono.just(okResponse));
 
         StepVerifier.create(clientAdapter.getProductDetail("1"))
                 .assertNext(p -> {
-                    System.out.println("product = " + p);
-                    System.out.println("availability = " + p.isAvailability());
-                    // comprobaciones más completas y con mensaje claro
-                    org.junit.jupiter.api.Assertions.assertEquals("1", p.getId(), "id mismatch");
-                    org.junit.jupiter.api.Assertions.assertEquals("Product 1", p.getName(), "name mismatch");
-                    org.junit.jupiter.api.Assertions.assertEquals(10.5, p.getPrice(), 1e-6, "price mismatch");
-                    org.junit.jupiter.api.Assertions.assertTrue(p.isAvailability(), "expected availability true");
+                    org.junit.jupiter.api.Assertions.assertEquals("1", p.getId());
+                    org.junit.jupiter.api.Assertions.assertEquals("Product 1", p.getName());
+                    org.junit.jupiter.api.Assertions.assertEquals(10.5, p.getPrice(), 1e-6);
+                    org.junit.jupiter.api.Assertions.assertTrue(p.isAvailability());
                 })
                 .verifyComplete();
     }
 
     @Test
-    void getProductDetail_throwsNotFoundException_when404() {
+    void getProductDetail_returnsEmpty_when404() {
         String body = "{\"error\":\"not found\"}";
 
         ClientResponse notFound = ClientResponse.create(HttpStatus.NOT_FOUND)
@@ -80,19 +78,15 @@ class ProductDetailClientAdapterTest {
                 .body(Flux.just(dataBufferFactory.wrap(body.getBytes(StandardCharsets.UTF_8))))
                 .build();
 
-        when(exchangeFunction.exchange(any()))
-                .thenReturn(Mono.just(notFound));
+        when(exchangeFunction.exchange(any())).thenReturn(Mono.just(notFound));
 
+        // en vez de esperar excepción, esperamos Mono vacío
         StepVerifier.create(clientAdapter.getProductDetail("999"))
-                .expectErrorSatisfies(throwable -> {
-                    assert throwable instanceof NotFoundException;
-                    assert throwable.getMessage().contains("Detail 999 not found");
-                })
-                .verify();
+                .verifyComplete();
     }
 
     @Test
-    void getProductDetail_throwsExternalServiceException_when5xx() {
+    void getProductDetail_returnsEmpty_when5xx() {
         String body = "{\"error\":\"bad gateway\"}";
 
         ClientResponse serverError = ClientResponse.create(HttpStatus.BAD_GATEWAY)
@@ -100,14 +94,23 @@ class ProductDetailClientAdapterTest {
                 .body(Flux.just(dataBufferFactory.wrap(body.getBytes(StandardCharsets.UTF_8))))
                 .build();
 
-        when(exchangeFunction.exchange(any()))
-                .thenReturn(Mono.just(serverError));
+        when(exchangeFunction.exchange(any())).thenReturn(Mono.just(serverError));
 
+        // si el adaptador devuelve Mono.empty() en errores 5xx
         StepVerifier.create(clientAdapter.getProductDetail("1"))
-                .expectErrorSatisfies(throwable -> {
-                    assert throwable instanceof ExternalServiceException;
-                    assert throwable.getMessage().contains("detail 5xx");
-                })
-                .verify();
+                .verifyComplete();
+    }
+
+    @Test
+    void shouldReturnEmptyWhenServiceFails() {
+        CircuitBreaker cb = CircuitBreaker.ofDefaults("testCB");
+        Retry retry = Retry.ofDefaults("testRetry");
+        WebClient webClient = WebClient.builder().baseUrl("http://localhost:9999").build();
+
+        ProductDetailClientAdapter adapter = new ProductDetailClientAdapter(webClient, cb, retry);
+
+        StepVerifier.create(adapter.getProductDetail("1"))
+                .expectNextCount(0)
+                .verifyComplete();
     }
 }
