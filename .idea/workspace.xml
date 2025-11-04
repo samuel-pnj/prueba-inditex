@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="test(several files): test classes and screenshots">
+    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="fix(several files): Adapters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/similarProducts/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/application/service/GetSimilarProductsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/application/service/GetSimilarProductsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/similarProducts/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/SimilarIdsClientAdapterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/application/service/GetSimilarProductsServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/application/service/GetSimilarProductsServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +79,12 @@
     "Application.Application.executor": "Run",
     "Application.Unnamed.executor": "Run",
     "JUnit.All in similar-products (1).executor": "Coverage",
-    "JUnit.All in similar-products (2).executor": "Run",
+    "JUnit.All in similar-products (2).executor": "Coverage",
     "JUnit.All in similar-products (3).executor": "Coverage",
-    "JUnit.All in similar-products.executor": "Run",
+    "JUnit.All in similar-products.executor": "Coverage",
     "JUnit.AppConfigTest.executor": "Run",
     "JUnit.ApplicationContextTest.executor": "Run",
+    "JUnit.GetSimilarProductsServiceTest.executor": "Run",
     "JUnit.GetSimilarProductsServiceTest.shouldPropagateErrorWhenSimilarIdsFails.executor": "Run",
     "JUnit.GetSimilarProductsServiceTest.shouldReturnEmptyListWhenSimilarIdsFails.executor": "Run",
     "JUnit.GetSimilarProductsServiceTest.shouldReturnListOfProductsWhenIdsExist.executor": "Run",
@@ -84,6 +93,7 @@
     "JUnit.ProductDetailClientAdapterTest.executor": "Run",
     "JUnit.RestExceptionHandlerTest.executor": "Run",
     "JUnit.SimilarIdsClientAdapterTest.executor": "Run",
+    "JUnit.SimilarIdsClientAdapterTest.shouldReturnEmptyListWhenExternalServiceFails.executor": "Run",
     "Maven.similar-products [clean,install].executor": "Run",
     "Maven.similar-products [clean].executor": "Run",
     "Maven.similar-products [compile].executor": "Run",
@@ -117,23 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in similar-products (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="similar-products" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in similar-products (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="similar-products" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in similar-products (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="similar-products" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -149,16 +143,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationContextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetSimilarProductsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="similar-products" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.similarProducts.*" />
+          <option name="PATTERN" value="com.example.similarProducts.application.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.similarProducts" />
-      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.ApplicationContextTest" />
+      <option name="PACKAGE_NAME" value="com.example.similarProducts.application.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.application.service.GetSimilarProductsServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDetailClientAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.similarProducts.adapters.outbound.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.similarProducts.adapters.outbound.http" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.adapters.outbound.http.ProductDetailClientAdapterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimilarIdsClientAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="similar-products" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.similarProducts.adapters.outbound.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.similarProducts.adapters.outbound.http" />
+      <option name="MAIN_CLASS_NAME" value="com.example.similarProducts.adapters.outbound.http.SimilarIdsClientAdapterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,10 +191,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in similar-products (2)" />
-        <item itemvalue="JUnit.All in similar-products (3)" />
+        <item itemvalue="JUnit.GetSimilarProductsServiceTest" />
         <item itemvalue="JUnit.All in similar-products" />
-        <item itemvalue="JUnit.ApplicationContextTest" />
-        <item itemvalue="JUnit.All in similar-products (1)" />
+        <item itemvalue="JUnit.SimilarIdsClientAdapterTest" />
+        <item itemvalue="JUnit.ProductDetailClientAdapterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +342,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761924448890</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix(several files): AppConfig">
+      <option name="closed" value="true" />
+      <created>1762278720781</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762278720781</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix(several files): Adapters">
+      <option name="closed" value="true" />
+      <created>1762279016250</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762279016250</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,7 +400,9 @@
     <MESSAGE value="test(several files): create tests" />
     <MESSAGE value="refactor(several files): Functional improvements" />
     <MESSAGE value="test(several files): test classes and screenshots" />
-    <option name="LAST_COMMIT_MESSAGE" value="test(several files): test classes and screenshots" />
+    <MESSAGE value="fix(several files): AppConfig" />
+    <MESSAGE value="fix(several files): Adapters" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(several files): Adapters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -382,8 +424,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products.ic" NAME="All in similar-products Coverage Results" MODIFIED="1761913768114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__2_.ic" NAME="All in similar-products (2) Coverage Results" MODIFIED="1761912336569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__1_.ic" NAME="All in similar-products (1) Coverage Results" MODIFIED="1761912451407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products.ic" NAME="All in similar-products Coverage Results" MODIFIED="1762281926815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__2_.ic" NAME="All in similar-products (2) Coverage Results" MODIFIED="1762282240543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/prueba_inditex$All_in_similar_products__1_.ic" NAME="All in similar-products (1) Coverage Results" MODIFIED="1762279742509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
