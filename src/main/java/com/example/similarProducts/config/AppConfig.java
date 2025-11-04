@@ -1,5 +1,10 @@
 package com.example.similarProducts.config;
 
+import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
+import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import io.github.resilience4j.retry.Retry;
+import io.github.resilience4j.retry.RetryConfig;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,36 +15,54 @@ import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.resources.ConnectionProvider;
+import reactor.util.retry.RetryBackoffSpec;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
 public class AppConfig {
-    // config/AppConfig.java
+
     @Bean
-    public WebClient webClient(WebClient.Builder builder,
-                               @Value("${external.product-service.base-url:http://localhost:3001}") String baseUrl,
-                               @Value("${client.max-connections:200}") int maxConnections,
-                               @Value("${client.connect-timeout-ms:2000}") int connectTimeoutMs,
-                               @Value("${client.read-timeout-ms:10000}") int readTimeoutMs) {
+    public WebClient webClient(WebClient.Builder builder) {
+        return builder.build();
+    }
 
-        ConnectionProvider provider = ConnectionProvider.builder("fixed")
-                .maxConnections(maxConnections)
-                .pendingAcquireMaxCount(-1) // allow queueing
+    @Bean
+    public CircuitBreakerRegistry circuitBreakerRegistry() {
+        CircuitBreakerConfig config = CircuitBreakerConfig.custom()
+                .failureRateThreshold(50) // abre el circuito si más del 50% fallan
+                .waitDurationInOpenState(Duration.ofSeconds(5))
+                .slidingWindowSize(10)
                 .build();
+        return CircuitBreakerRegistry.of(config);
+    }
 
-        HttpClient httpClient = HttpClient.create(provider)
-                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, Math.max(1000, connectTimeoutMs))
-                .doOnConnected(conn -> conn.addHandlerLast(new ReadTimeoutHandler(Math.max(1, readTimeoutMs), TimeUnit.MILLISECONDS)));
+    @Bean
+    public CircuitBreaker productDetailCircuitBreaker(CircuitBreakerRegistry registry) {
+        return registry.circuitBreaker("productDetailCircuitBreaker");
+    }
 
-        ReactorClientHttpConnector connector = new ReactorClientHttpConnector(httpClient);
+    @Bean
+    public CircuitBreaker similarIdsCircuitBreaker(CircuitBreakerRegistry registry) {
+        return registry.circuitBreaker("similarIdsCircuitBreaker");
+    }
 
-        return builder
-                .clientConnector(connector)
-                .baseUrl(baseUrl)
-                .exchangeStrategies(ExchangeStrategies.builder()
-                        .codecs(c -> c.defaultCodecs().maxInMemorySize(16 * 1024 * 1024)).build())
+    @Bean
+    public Retry reactiveRetry() {
+        RetryConfig config = RetryConfig.custom()
+                .maxAttempts(3)
+                .waitDuration(Duration.ofMillis(300))
+                .retryExceptions(RuntimeException.class)
                 .build();
+        return Retry.of("defaultRetry", config);
+    }
+
+    @Bean
+    public RetryBackoffSpec reactorRetrySpec() {
+        return reactor.util.retry.Retry
+                .backoff(3, Duration.ofMillis(300))
+                .filter(ex -> ex instanceof RuntimeException);
     }
 
 
