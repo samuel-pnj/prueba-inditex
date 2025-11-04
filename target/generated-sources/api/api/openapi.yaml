@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  title: existingApis
+  version: "1.0"
+servers:
+- url: http://localhost:3001
+paths:
+  /product/{productId}/similarids:
+    get:
+      description: Returns the similar products to a given one ordered by similarity
+      operationId: get-product-similarids
+      parameters:
+      - explode: false
+        in: path
+        name: productId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimilarProducts'
+          description: OK
+      summary: Gets the ids of the similar products
+      x-accepts: application/json
+  /product/{productId}:
+    get:
+      description: Returns the product detail for a given productId
+      operationId: get-product-productId
+      parameters:
+      - explode: false
+        in: path
+        name: productId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDetail'
+          description: OK
+        "404":
+          description: Product Not found
+      summary: Gets a product detail
+      x-accepts: application/json
+components:
+  schemas:
+    SimilarProducts:
+      description: List of similar product Ids to a given one ordered by similarity
+      items:
+        example: "[\"1\",\"2\",\"3\"]"
+        type: string
+      minItems: 0
+      type: array
+      uniqueItems: true
+    ProductDetail:
+      description: Product detail
+      example:
+        price: 0.8008281904610115
+        name: name
+        id: id
+        availability: true
+      properties:
+        id:
+          minLength: 1
+          type: string
+        name:
+          minLength: 1
+          type: string
+        price:
+          type: number
+        availability:
+          type: boolean
+      required:
+      - availability
+      - id
+      - name
+      - price
+      type: object
+

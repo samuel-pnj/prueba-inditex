@@ -102,8 +102,13 @@
             <artifactId>resilience4j-reactor</artifactId>
             <version>2.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <!-- Spring Boot Maven Plugin -->
@@ -111,7 +116,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            
             <!-- OpenAPI generator -->
             <plugin>
                 <groupId>org.openapitools</groupId>
@@ -132,12 +136,10 @@
                             <apiPackage>org.example.client.api</apiPackage>
                             <modelPackage>org.example.client.model</modelPackage>
                             <configOptions>
-                                <useJakartaAnnotations>true</useJakartaAnnotations>
+                                <useJakartaEe>true</useJakartaEe>
+                                <generateApiTests>false</generateApiTests>
+                                <generateModelTests>false</generateModelTests>
                             </configOptions>
-                            <typeMappings>
-                                <typeMapping>javax.annotation.Nullable=jakarta.annotation.Nullable</typeMapping>
-                                <typeMapping>javax.annotation.Nonnull=jakarta.annotation.Nonnull</typeMapping>
-                            </typeMappings>
                             <importMappings>
                                 <importMapping>javax.annotation.Nullable=jakarta.annotation.Nullable</importMapping>
                                 <importMapping>javax.annotation.Nonnull=jakarta.annotation.Nonnull</importMapping>
@@ -145,7 +147,6 @@
                         </configuration>
 
                     </execution>
-
                     <!-- Cliente Similar Products -->
                     <execution>
                         <id>generate-products</id>
@@ -160,7 +161,9 @@
                             <apiPackage>org.example.products.api</apiPackage>
                             <modelPackage>org.example.products.model</modelPackage>
                             <configOptions>
-                                <useJakartaAnnotations>true</useJakartaAnnotations>
+                                <useJakartaEe>true</useJakartaEe>
+                                <generateApiTests>false</generateApiTests>
+                                <generateModelTests>false</generateModelTests>
                             </configOptions>
                             <typeMappings>
                                 <typeMapping>javax.annotation.Nullable=jakarta.annotation.Nullable</typeMapping>
@@ -170,6 +173,27 @@
                                 <importMapping>javax.annotation.Nullable=jakarta.annotation.Nullable</importMapping>
                                 <importMapping>javax.annotation.Nonnull=jakarta.annotation.Nonnull</importMapping>
                             </importMappings>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.4.0</version>
+                <executions>
+                    <execution>
+                        <id>add-generated-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-sources/api/src/test/java</source>
+                                <source>${project.build.directory}/generated-sources/products/src/test/java</source>
+                            </sources>
                         </configuration>
                     </execution>
                 </executions>
