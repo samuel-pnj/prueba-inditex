@@ -1,6 +1,5 @@
 .github/workflows/maven.yml
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -29,5 +28,3 @@ src/main/java/org/example/products/auth/Authentication.java
 src/main/java/org/example/products/auth/HttpBasicAuth.java
 src/main/java/org/example/products/auth/HttpBearerAuth.java
 src/main/java/org/example/products/model/ProductDetail.java
-src/test/java/org/example/products/api/DefaultApiTest.java
-src/test/java/org/example/products/model/ProductDetailTest.java
