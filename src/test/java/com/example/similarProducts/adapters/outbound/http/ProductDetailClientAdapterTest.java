@@ -109,8 +109,9 @@ class ProductDetailClientAdapterTest {
 
         ProductDetailClientAdapter adapter = new ProductDetailClientAdapter(webClient, cb, retry);
 
-        StepVerifier.create(adapter.getProductDetail("1"))
+        StepVerifier.create(adapter.getProductDetail("123"))
                 .expectNextCount(0)
                 .verifyComplete();
+
     }
 }
