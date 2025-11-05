@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ProductDetail.JSON_PROPERTY_PRICE,
   ProductDetail.JSON_PROPERTY_AVAILABILITY
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-04T21:03:42.441832400+01:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-05T12:19:21.526469600+01:00[Europe/Madrid]")
 public class ProductDetail {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;
@@ -60,7 +60,7 @@ public class ProductDetail {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -86,7 +86,7 @@ public class ProductDetail {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -112,7 +112,7 @@ public class ProductDetail {
    * Get price
    * @return price
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -138,7 +138,7 @@ public class ProductDetail {
    * Get availability
    * @return availability
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_AVAILABILITY)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 

@@ -58,7 +58,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TimeZone;
 
-import jakarta.annotation.Nullable;
+import javax.annotation.Nullable;
 
 import java.time.OffsetDateTime;
 
@@ -67,7 +67,7 @@ import org.example.client.auth.HttpBasicAuth;
 import org.example.client.auth.HttpBearerAuth;
 import org.example.client.auth.ApiKeyAuth;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-04T21:03:42.441832400+01:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-05T12:19:21.526469600+01:00[Europe/Madrid]")
 public class ApiClient extends JavaTimeFormatter {
     public enum CollectionFormat {
         CSV(","), TSV("\t"), SSV(" "), PIPES("|"), MULTI(null);

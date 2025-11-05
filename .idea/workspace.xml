@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="fix(several files): Test modification">
+    <list default="true" id="37c79b8c-b783-44f5-b8fe-6be4a5885ee9" name="Changes" comment="fix(several files): pom fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/Application.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/adapters/inbound/rest/ProductController.class" beforeDir="false" />
@@ -23,8 +22,134 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/ports/outbound/GetProductDetailPort.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/similarProducts/ports/outbound/GetSimilarIdsPort.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/existingApis.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/ApiClient$CollectionFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/ApiClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/JavaTimeFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/RFC3339DateFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/ServerConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/ServerVariable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/api/DefaultApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/auth/ApiKeyAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/auth/Authentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/auth/HttpBasicAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/auth/HttpBearerAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/client/model/ProductDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/ApiClient$CollectionFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/ApiClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/JavaTimeFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/RFC3339DateFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/ServerConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/ServerVariable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/api/DefaultApi$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/api/DefaultApi$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/api/DefaultApi$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/api/DefaultApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/auth/ApiKeyAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/auth/Authentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/auth/HttpBasicAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/auth/HttpBearerAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/products/model/ProductDetail.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/similarProducts.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.github/workflows/maven.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/FILES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.openapi-generator/existingApis.yaml-generate-api.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/api/openapi.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/docs/DefaultApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/docs/ProductDetail.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/git_push.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/JavaTimeFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/RFC3339DateFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/ServerVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/api/DefaultApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/ApiKeyAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/HttpBasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/auth/HttpBearerAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/main/java/org/example/client/model/ProductDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/test/java/org/example/client/api/DefaultApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/api/src/test/java/org/example/client/model/ProductDetailTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.github/workflows/maven.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/FILES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.openapi-generator/similarProducts.yaml-generate-products.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/api/openapi.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/docs/DefaultApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/docs/ProductDetail.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/git_push.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/JavaTimeFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/RFC3339DateFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/ServerVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/api/DefaultApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/ApiKeyAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/HttpBasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/auth/HttpBearerAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/main/java/org/example/products/model/ProductDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/test/java/org/example/products/api/DefaultApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/products/src/test/java/org/example/products/model/ProductDetailTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/similar-products-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/similar-products-1.0.0.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.similarProducts.adapters.inbound.rest.ProductControllerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.similarProducts.adapters.outbound.http.ProductDetailClientAdapterTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.similarProducts.adapters.outbound.http.SimilarIdsClientAdapterTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.similarProducts.application.service.GetSimilarProductsServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.similarProducts.domain.model.exception.RestExceptionHandlerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.similarProducts.adapters.inbound.rest.ProductControllerTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.similarProducts.adapters.outbound.http.ProductDetailClientAdapterTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.similarProducts.adapters.outbound.http.SimilarIdsClientAdapterTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.similarProducts.application.service.GetSimilarProductsServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.similarProducts.domain.model.exception.RestExceptionHandlerTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Capturas/Captura_.docker_run.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Capturas/Captura_docker_revision.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Capturas/Captura_grafana.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Capturas/Captura_llamada_curl.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/inbound/rest/ProductControllerTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/adapters/outbound/http/ProductDetailClientAdapterTest.class" beforeDir="false" />
@@ -32,6 +157,10 @@
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/application/service/GetSimilarProductsServiceTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/config/AppConfigTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/similarProducts/domain/model/exception/RestExceptionHandlerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/client/api/DefaultApiTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/client/model/ProductDetailTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/products/api/DefaultApiTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/products/model/ProductDetailTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +221,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Application.executor": "Debug",
+    "Application.Application.executor": "Run",
     "Application.Unnamed.executor": "Run",
     "JUnit.All in similar-products (1).executor": "Coverage",
     "JUnit.All in similar-products (2).executor": "Coverage",
@@ -118,7 +247,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#3 on feature/SimilarProductService-creation",
+    "git-widget-placeholder": "feature/SimilarProductService-creation",
     "last_opened_file_path": "C:/Users/samue/Desktop/prueba-inditec/prueba-inditex",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable"
   }
@@ -392,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762283601988</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix(several files): pom fixed">
+      <option name="closed" value="true" />
+      <created>1762287032947</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1762287032947</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +574,8 @@
     <MESSAGE value="fix(several files): AppConfig" />
     <MESSAGE value="fix(several files): Adapters" />
     <MESSAGE value="fix(several files): Test modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(several files): Test modification" />
+    <MESSAGE value="fix(several files): pom fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(several files): pom fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
